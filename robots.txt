@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pravinfulware.github.io/disha-computer-institute/sitemap.xml
