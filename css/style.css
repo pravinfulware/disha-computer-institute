@@ -1,0 +1,78 @@
+
+:root{
+  --bg-dark:#0f0f0f;
+  --bg-light:#ffffff;
+  --glass-dark:rgba(0,0,0,0.65);
+  --glass-light:rgba(255,255,255,0.65);
+  --primary:#ff7a00;
+}
+
+body.dark{
+  background:linear-gradient(135deg,#000,#111);
+  color:white;
+}
+
+body.light{
+  background:#f9f9f9;
+  color:#111;
+}
+
+.glass{
+  background:var(--glass-dark);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 10px 35px rgba(0,0,0,.6);
+  animation:floatIn 0.8s ease forwards;
+}
+
+@keyframes floatIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.orange{ color:var(--primary); }
+
+.toggle-btn{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:var(--primary);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:30px;
+  font-weight:bold;
+  z-index:9999;
+  cursor:pointer;
+}
+
+.success-popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#111;
+  color:#fff;
+  padding:30px 40px;
+  border-radius:20px;
+  display:none;
+  z-index:99999;
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.5)}
+  to{transform:scale(1)}
+}
+
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px;
+  font-size:26px;
+  border-radius:50%;
+  z-index:9999;
+  text-decoration:none;
+}

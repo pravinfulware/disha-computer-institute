@@ -12,67 +12,9 @@
 
 <meta name="description" content="Learn about Disha Computer Institute Alandi — our mission, faculty, teaching methodology and 20+ years of training experience. Trusted by thousands of students in Pune." />
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<script defer src="https://unpkg.com/scrollreveal"></script>
 
-<style>
-:root{
-  --bg-dark:#0f0f0f;
-  --bg-light:#ffffff;
-  --glass-dark:rgba(0,0,0,0.65);
-  --glass-light:rgba(255,255,255,0.65);
-  --primary:#ff7a00;
-}
-body.dark{background:linear-gradient(135deg,#000,#111);color:white;}
-body.light{background:#f9f9f9;color:#111;}
 
-.glass{
-  background:var(--glass-dark);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 10px 35px rgba(0,0,0,.6);
-  animation:floatIn 0.8s ease forwards;
-}
 
-@keyframes floatIn{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.orange{color:var(--primary);}
-
-.toggle-btn{
-  position:fixed;
-  bottom:90px;
-  right:20px;
-  background:var(--primary);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:30px;
-  font-weight:bold;
-  z-index:9999;
-}
-
-.success-popup{
-  position:fixed;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  background:#111;color:#fff;
-  padding:30px 40px;border-radius:20px;
-  display:none;z-index:99999;
-  animation:pop 0.5s ease;
-}
-
-@keyframes pop{
-  from{transform:scale(.5)}
-  to{transform:scale(1)}
-}
-
-.whatsapp-float{
-  position:fixed;bottom:20px;right:20px;
-  background:#25D366;color:white;
-  padding:14px;font-size:26px;border-radius:50%;
-  z-index:9999;
-}
-</style>
 
 <title>About Us | Disha Computer Institute</title>
 <meta name="description" content="Learn about Disha Computer Institute and our mission to build IT careers.">
@@ -86,20 +28,9 @@ body.light{background:#f9f9f9;color:#111;}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Disha Computer Institute",
-  "url": "https://yourdomain.com",
-  "telephone": "+91-8956444441",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN"
-  }
-}
-</script>
 
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class='dark' class="bg-gray-50 text-gray-900">
 
@@ -136,47 +67,20 @@ body.light{background:#f9f9f9;color:#111;}
   </div>
 </footer>
 
-<script defer src="js/scroll.js"></script>
+
 
 <a href="https://wa.me/918956444441" target="_blank" class="whatsapp-float">💬</a>
 
-<script>
-function toggleTheme(){
-  document.body.classList.toggle("dark");
-  document.body.classList.toggle("light");
-}
-</script>
 
-<script>
-// ✅ AUTO THEME REMEMBER
-(function(){
-  const savedTheme = localStorage.getItem("theme");
-  if(savedTheme){
-    document.body.classList.remove("dark","light");
-    document.body.classList.add(savedTheme);
-  }
-})();
 
-function toggleTheme(){
-  if(document.body.classList.contains("dark")){
-    document.body.classList.remove("dark");
-    document.body.classList.add("light");
-    localStorage.setItem("theme","light");
-  } else {
-    document.body.classList.remove("light");
-    document.body.classList.add("dark");
-    localStorage.setItem("theme","dark");
-  }
-}
 
-// ✅ ADVANCED LEAD TRACKING (localStorage CRM)
-function saveLeadToLocalCRM(lead){
-  let leads = JSON.parse(localStorage.getItem("leads") || "[]");
-  leads.push(lead);
-  localStorage.setItem("leads", JSON.stringify(leads));
-  console.log("✅ Lead Saved:", lead);
-}
-</script>
+
+
+<div class="toggle-btn" onclick="toggleTheme()">🌗</div>
+<a href="https://wa.me/918956444441" class="whatsapp-float">💬</a>
+<div id="successPopup" class="success-popup">✅ Submitted Successfully!</div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
