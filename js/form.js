@@ -22,7 +22,7 @@ async function handleSubmit(e){
   };
 
   // ✅ SEND TO GOOGLE SHEET (LIVE)
-  await fetch("https://script.google.com/macros/s/AKfycbxNsthvXLw5Z73X4KpBZpH8rBXNwosLIMYZq0sDR7Jq7rNIZrFmiSPHlsVwe3lFOEfmcA/exec", {
+  await fetch("https://script.google.com/macros/s/AKfycbzs2AjLPMGD4OlrvzErYCiOir7IFa2BupXvsfpmsGotmGbpgJeuWqITbW0jrMI-_EQ-9w/exec", {
     method: "POST",
     body: JSON.stringify(leadData)
   });
