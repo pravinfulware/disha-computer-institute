@@ -76,3 +76,44 @@ body.light{
   z-index:9999;
   text-decoration:none;
 }
+.image-page{
+      max-width:1200px;
+      margin:60px auto;
+      padding:40px;
+      display:grid;
+      grid-template-columns:1fr 1.2fr;
+      gap:40px;
+    }
+    .image-page img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 15px 40px rgba(0,0,0,.6);
+    }
+    .image-page h5{
+      color:#ff7a00;
+      letter-spacing:2px;
+    }
+    .image-page h2{
+      font-size:42px;
+      margin:10px 0;
+    }
+    .image-page p{
+      line-height:1.8;
+      opacity:0.9;
+    }
+    .stats-row{
+      display:flex;
+      gap:20px;
+      margin-top:25px;
+    }
+    .stat-card{
+      flex:1;
+      padding:22px 15px;
+      text-align:center;
+      border-radius:16px;
+      color:white;
+      font-weight:bold;
+    }
+    .green{background:#2ecc71}
+    .blue{background:#2b7cff}
+    .red{background:#ff4d5a}
