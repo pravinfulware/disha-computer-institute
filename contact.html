@@ -134,6 +134,48 @@
 <a href="https://wa.me/918956444441" class="whatsapp-float">💬</a>
 <div id="successPopup" class="success-popup">✅ Submitted Successfully!</div>
 
+
+  <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = this.querySelector('input[placeholder="Your Name"]').value;
+  let email = this.querySelector('input[placeholder="Your Email"]').value;
+  let mobile = this.querySelector('input[placeholder="Mobile"]').value;
+  let address = this.querySelector('input[placeholder="Address"]').value;
+  let message = this.querySelector('textarea').value;
+
+  fetch("https://script.google.com/macros/s/AKfycbwlrCNtT26pHzmbWMipjszsrvFcmdsSxL7p2Q6IErYD92xMvaF-IcKnVXG7yC4xYPOv/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name, email, mobile, address, message
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "success") {
+
+      // ✅ WhatsApp Auto Message
+      let whatsappURL = `https://wa.me/918956444441?text=
+      Name: ${name}%0A
+      Email: ${email}%0A
+      Mobile: ${mobile}%0A
+      Address: ${address}%0A
+      Message: ${message}`;
+
+      window.open(whatsappURL, "_blank");
+
+      alert("✅ Message Sent Successfully!");
+      this.reset();
+    }
+  });
+});
+</script>
+
+
+
+
 <script src="js/main.js"></script>
 
 </body>
